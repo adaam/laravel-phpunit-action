@@ -8,6 +8,8 @@ docker-php-ext-configure pcntl --enable-pcntl && docker-php-ext-install pcntl pd
 
 cp .env.example .env
 
+pwd
+ls -la
 php artisan key:generate
 
 php vendor/bin/phpunit
