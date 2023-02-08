@@ -10,6 +10,6 @@ cp .env.example .env
 
 pwd
 ls -la
-php artisan key:generate
+php ./artisan key:generate
 
 php vendor/bin/phpunit
