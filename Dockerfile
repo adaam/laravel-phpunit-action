@@ -1,4 +1,4 @@
-FROM composer:latest
+FROM php:8.0-alpine
 
 LABEL "com.github.actions.name"="Laravel PHPUnit"
 LABEL "com.github.actions.description"="A GitHub action to run your Laravel project's PHPUnit test suite."
