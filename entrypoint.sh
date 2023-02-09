@@ -9,9 +9,11 @@ docker-php-ext-configure pcntl --enable-pcntl && docker-php-ext-install pcntl pd
 
 composer install --prefer-dist
 cp .env.example .env
+echo -e "extension=xdebug.so\nzend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20200930/xdebug.so" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 pwd
 ls -la
+ls -la /usr/local/etc/php/conf.d/
 php ./artisan key:generate
 
 php vendor/bin/phpunit --coverage-text
