@@ -8,4 +8,4 @@ cp .env.example .env
 
 php ./artisan key:generate
 
-XDEBUG_MODE=coverage php vendor/bin/phpunit --coverage-text
+XDEBUG_MODE=coverage php vendor/bin/phpunit --coverage-cobertura coverage.cobertura.xml
