@@ -14,7 +14,5 @@ RUN apk add --no-cache unzip && apk add --update linux-headers
 RUN apk add --no-cache --virtual .build-deps autoconf g++ make && pecl install redis xdebug && apk del .build-deps
 RUN docker-php-ext-configure pcntl --enable-pcntl && docker-php-ext-install pcntl pdo pdo_mysql && docker-php-ext-enable redis && docker-php-ext-enable xdebug && rm -rf /tmp/pear
 
-RUN composer install --prefer-dist
-
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
