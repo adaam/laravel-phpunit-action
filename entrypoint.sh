@@ -1,5 +1,7 @@
 #!/bin/sh -l
 
+set -x
+
 curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 apk add --no-cache unzip
 apk add --no-cache --virtual .build-deps autoconf g++ make && pecl install redis && apk del .build-deps
